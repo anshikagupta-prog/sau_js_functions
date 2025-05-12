@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript Project</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>JavaScript Project</h1>
+
+        <div class="block">
+        <h2>Color Tools</h2>
+        <div class="circle" onclick="changeColor(this)" style="background-color: var(--secondary)" data-color-index="0"></div>
+    </div>
+
+    <div class="block">
+    <h2>Color Mixer</h2>
+    <div class="color-mixer">
+            <div>
+                <input type="range" id="red" min="0" max="255" value="128">
+                <label for="red">Red</label>
+            </div>
+            <div>
+                <input type="range" id="green" min="0" max="255" value="128">
+                <label for="green">Green</label>
+            </div>
+            <div>
+                <input type="range" id="blue" min="0" max="255" value="128">
+                <label for="blue">Blue</label>
+            </div>
+            <div class="color-preview" id="colorPreview"></div>
+        </div>
+        <div class="color-name" id="colorName"></div>
+    </div>
+
+    
+    <div class="block">
+        <h2>Math Tools</h2>
+        <input type="number" id="num1" placeholder="Number 1">
+        <input type="number" id="num2" placeholder="Number 2">
+        <button onclick="performOperation('add')">Add</button>
+        <button onclick="performOperation('multiply')">Multiply</button>
+        <p id="mathResult"></p>
+    </div>
+
+   
+    <div class="block">
+        <h2>Number Checkers</h2>
+        <input type="number" id="evenOddInput" placeholder="Check Even/Odd">
+        <button onclick="checkEvenOdd()">Check</button>
+        <p id="evenOddResult"></p>
+        
+        <input type="number" id="primeInput" placeholder="Find Primes" style="margin-top: 15px;">
+        <button onclick="showPrimes()">Show Primes</button>
+        <p id="primeResult"></p>
+    </div>
+
+    
+    <div class="block">
+        <h2>Age & Grade</h2>
+        <input type="number" id="ageInput" placeholder="Check Voting Age">
+        <button onclick="checkVotingAge()">Check</button>
+        <p id="votingResult"></p>
+        
+        <input type="number" id="marksInput" placeholder="Calculate Grade" style="margin-top: 15px;">
+        <button onclick="calculateGrade()">Calculate</button>
+        <p id="gradeResult"></p>
+    </div>
+
+    
+    <div class="block">
+        <h2>Interaction Counters</h2>
+        <button class="counter-btn" id="counterButton">Interact Here</button>
+        <p>Clicks: <span id="clickCount">0</span></p>
+        <p>Double Clicks: <span id="dblClickCount">0</span></p>
+        <p>Hovers: <span id="hoverCount">0</span></p>
+    </div>
+
+    
+    <div class="block">
+        <h2>Registration Form</h2>
+        <form id="regForm" onsubmit="return handleFormSubmit(event)">
+            <input type="text" placeholder="Name" required>
+            <input type="email" placeholder="Email" required>
+            <input type="tel" placeholder="Contact" required>
+            <input type="number" placeholder="Roll No" required>
+            <button type="submit">Submit</button>
+        </form>
+    </div>
+
+    
+    <div class="block">
+        <h2>Alerts</h2>
+        <button onclick="alert('Button 1 Alert!')">Alert 1</button>
+        <button onclick="alert('Button 2 Alert!')">Alert 2</button>
+    </div>
+
+    
+    <div class="block" id="calculator">
+        <h2>Calculator</h2>
+        <input type="text" class="calc-display" id="display" readonly>
+        <div class="calc-buttons">
+            <button onclick="appendToDisplay('7')">7</button>
+            <button onclick="appendToDisplay('8')">8</button>
+            <button onclick="appendToDisplay('9')">9</button>
+            <button onclick="appendToDisplay('+')">+</button>
+            <button onclick="appendToDisplay('4')">4</button>
+            <button onclick="appendToDisplay('5')">5</button>
+            <button onclick="appendToDisplay('6')">6</button>
+            <button onclick="appendToDisplay('-')">-</button>
+            <button onclick="appendToDisplay('1')">1</button>
+            <button onclick="appendToDisplay('2')">2</button>
+            <button onclick="appendToDisplay('3')">3</button>
+            <button onclick="appendToDisplay('*')">×</button>
+            <button onclick="appendToDisplay('0')">0</button>
+            <button onclick="appendToDisplay('.')">.</button>
+            <button onclick="calculate()">=</button>
+            <button onclick="appendToDisplay('/')">/</button>
+            <button onclick="clearDisplay()">C</button>
+            <button onclick="appendToDisplay('(')">(</button>
+            <button onclick="appendToDisplay(')')">)</button>
+        </div>
+    </div>
+
+    
+    <section>
+        <h2>Notes App</h2>
+        <textarea id="noteInput" rows="4" cols="50" placeholder="Write your note here..."></textarea>
+        <button onclick="addNote()">Add Note</button>
+        <ul id="notesList"></ul>
+    </section>
+
+    
+    <section>
+        <h2>Task Manager</h2>
+        <input type="text" id="taskInput" placeholder="Enter a task" />
+        <button onclick="addTask()">Add Task</button>
+        <ul id="taskList"></ul>
+    </section>
+
+    
+    <section>
+        <h2>DOM Manipulation</h2>
+        <p id="domText">This is the original text.</p>
+        <button onclick="changeText()">Change Text</button>
+        <button onclick="changeBackgroundColor()">Change Background Color</button>
+    </section>
+
+    <section>
+        <h2>Show/Hide Password</h2>
+        <input type="password" id="passwordInput" placeholder="Enter your password" />
+        <button onclick="togglePasswordVisibility()">Show/Hide</button>
+    </section>
+
+    <script src="script.js"></script>
+</body>
+</html>
